@@ -1,0 +1,13 @@
+.navbar{
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 6rem;
+}
+
+.nav-logo{
+    width:150px;
+}
+
+.nav-item a{
+    color:#474747;
+    text-decoration:none;
+}

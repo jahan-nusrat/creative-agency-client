@@ -1,0 +1,9 @@
+.hero-container .row{
+    height: 70vh;
+
+}
+
+.hero-container h1{
+    color:  #111430;
+    font-weight: 700;
+}
