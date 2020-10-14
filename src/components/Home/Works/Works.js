@@ -36,9 +36,9 @@ const Works = () => {
                 <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={5000}
                     keyBoardControl={true} dotListClass="custom-dot-list-style" showDots={true}>
                     {
-                        carousels.map(carousel => {
+                        carousels.map((carousel, idx) => {
                             return (
-                                <div>
+                                <div key={idx}>
                                     <img className='slider-image' src={carousel} alt="" />
                                 </div>
                             )

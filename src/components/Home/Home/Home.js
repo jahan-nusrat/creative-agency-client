@@ -1,6 +1,5 @@
 import React from 'react'
 import Feedback from '../Feedback/Feedback';
-import ContactForm from '../Footer/ContactForm';
 import Footer from '../Footer/Footer';
 import Hero from '../Hero/Hero'
 import Navbar from '../Nav/Navbar';

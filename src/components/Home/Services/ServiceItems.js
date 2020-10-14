@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -9,22 +10,26 @@ const ServiceItems = ({ service }) => {
 
     return (
         <div className="col-lg-4">
-            <animated.div
-                class="card"
+            <Link to={`/customer/order?${service.id}`}>
+        <animated.div
+                    className="card"
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
                 onMouseLeave={() => set({ xys: [0, 0, 1] })}
                 style={{ transform: props.xys.interpolate(trans) }}
             >
-            <div className="service-box">
-                <div className="service-icon">
-                    <img src={service.icon} alt="" />
+
+                <div className="service-box">
+                    <div className="service-icon">
+                        <img src={service.icon} alt="" />
+                    </div>
+                    <div className="service-details">
+                        <h4>{service.service}</h4>
+                        <p>{service.description}</p>
+                    </div>
                 </div>
-                <div className="service-details">
-                    <h4>{service.service}</h4>
-                    <p>{service.description}</p>
-                </div>
-            </div>
             </animated.div>
+            </Link>
+
         </div>
     )
 }

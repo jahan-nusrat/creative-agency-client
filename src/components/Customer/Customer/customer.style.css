@@ -1,0 +1,29 @@
+.customer-section {
+    font-family: 'Poppins', sans-serif;
+}
+
+.customer .row {
+    height: 87vh;
+}
+
+.customer-nav h4 {
+    text-transform: capitalize;
+}
+
+.sidebar-details .active {
+    color: #009444;
+    font-weight: 600;
+}
+
+.sidebar-details .inactive {
+    color: #000000;
+}
+
+.sidebar-details .icon {
+    margin-right: 0.7rem;
+    font-size: 1.2rem;
+}
+
+.customer-right {
+    background-color: #F4F7FC;
+}
