@@ -1,5 +1,7 @@
 import React from 'react'
 import Feedback from '../Feedback/Feedback';
+import ContactForm from '../Footer/ContactForm';
+import Footer from '../Footer/Footer';
 import Hero from '../Hero/Hero'
 import Navbar from '../Nav/Navbar';
 import Partners from '../Partners/Partners';
@@ -20,6 +22,9 @@ const Home = () => {
                 <Works />
             </section>
             <Feedback />
+            <section className="footer-section">
+                <Footer />
+            </section>
         </div>
         
     )
