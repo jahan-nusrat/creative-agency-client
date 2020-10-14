@@ -29,15 +29,15 @@ const Admin = () => {
                     <div className="col-md-3 sidebar">
                         <LeftNav location={location} />
                     </div>
-                    <div className="col-md-9 customer-right pt-5 pl-5">
+                    <div className="col-md-9 customer-right pt-3 pl-4">
                         {
-                            location === 'services%20list' && <AllServices />
+                            location === 'services list' && <AllServices />
                         }
                         {
-                            location === 'add%20service' && <AddService />
+                            location === 'add service' && <AddService />
                         }
                         {
-                            location === 'make%20admin' && <MakeAdmin />
+                            location === 'make admin' && <MakeAdmin />
                         }
                     </div>
                 </div>

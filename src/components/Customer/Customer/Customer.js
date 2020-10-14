@@ -37,7 +37,7 @@ const Customer = () => {
                             location === 'review' && <Review />
                         }
                         {
-                            location === 'service%20list' && <ServiceList />
+                            location === 'service list' && <ServiceList />
                         }
                     </div>
                 </div>
