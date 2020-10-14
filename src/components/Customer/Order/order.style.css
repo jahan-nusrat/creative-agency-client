@@ -1,0 +1,22 @@
+.order-form ::placeholder {
+    font-size: 0.9rem;
+    opacity: 0.3;
+    font-weight: 300;
+}
+
+.upload {
+    background-color: #DEFFED;
+    border: 1px solid #009444;
+    color: #009444;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.upload .icon {
+    font-size: 1.2rem;
+    margin-top: -2px;
+}
+
+.form-price .col-6 {
+    padding: 0;
+}

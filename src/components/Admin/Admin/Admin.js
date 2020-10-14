@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom';
 import logo from '../../../images/logos/logo.png'
-import Order from '../Order/Order';
-import Review from '../Review/Review';
-import ServiceList from '../Service-List/ServiceList';
-import Sidebar from '../Sidebar/Sidebar';
-import './customer.style.css';
+import AddService from '../AddService/AddService';
+import AllServices from '../AllServices/AllServices';
+import LeftNav from '../LeftNav/LeftNav';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import '../../Customer/Customer/customer.style.css';
 
-const Customer = () => {
+const Admin = () => {
     const { location } = useParams();
     return (
         <section className="customer-section container-fluid">
@@ -27,17 +27,17 @@ const Customer = () => {
             <div className="customer">
                 <div className="row">
                     <div className="col-md-3 sidebar">
-                        <Sidebar location={location} />
+                        <LeftNav location={location} />
                     </div>
                     <div className="col-md-9 customer-right pt-5 pl-5">
                         {
-                            location === 'order' && <Order />
+                            location === 'services%20list' && <AllServices />
                         }
                         {
-                            location === 'review' && <Review />
+                            location === 'add%20service' && <AddService />
                         }
                         {
-                            location === 'service%20list' && <ServiceList />
+                            location === 'make%20admin' && <MakeAdmin />
                         }
                     </div>
                 </div>
@@ -46,4 +46,4 @@ const Customer = () => {
     )
 }
 
-export default Customer
+export default Admin

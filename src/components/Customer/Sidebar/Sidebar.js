@@ -12,7 +12,7 @@ const Sidebar = ({ location }) => {
                     </Link>
                 </li>
                 <li className="nav-item mb-3">
-                    <Link className={`${location === "service-List" ? "active" : "inactive"}`} to="/customer/service-List"
+                    <Link className={`${location === "service list" ? "active" : "inactive"}`} to="/customer/service%20list"
                     >
                         <FaNewspaper className="icon" />  Service List
                     </Link>

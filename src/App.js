@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Admin from './components/Admin/Admin/Admin';
 import Customer from './components/Customer/Customer/Customer';
 import Home from './components/Home/Home/Home';
 
@@ -16,6 +17,9 @@ const App = () => {
                 </Route>
                 <Route path="/customer/:location">
                     <Customer />
+                </Route>
+                <Route path="/admin/:location">
+                    <Admin />
                 </Route>
             </Switch>
         </Router>
