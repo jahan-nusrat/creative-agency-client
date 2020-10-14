@@ -30,7 +30,7 @@ const Customer = () => {
                     <div className="col-md-3 sidebar">
                         <Sidebar location={location} />
                     </div>
-                    <div className="col-md-9 customer-right pt-4 pl-5">
+                    <div className="col-md-9 customer-right pt-5 pl-5">
                         {
                             location === 'order' && <Order />
                         }
