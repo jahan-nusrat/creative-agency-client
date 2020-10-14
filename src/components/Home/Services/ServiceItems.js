@@ -1,9 +1,18 @@
 import React from 'react'
 
-const ServiceItems = () => {
+const ServiceItems = ({ service }) => {
     return (
-        <div>
-            <h2>I am from service</h2>
+        <div className="col-lg-4">
+            <div className="service-box">
+                <div className="service-icon">
+                    <img src={service.icon} alt="" />
+                </div>
+                <div className="service-details">
+                    <h4>{service.service}</h4>
+                    <p>{service.description}</p>
+                </div>
+            </div>
+
         </div>
     )
 }

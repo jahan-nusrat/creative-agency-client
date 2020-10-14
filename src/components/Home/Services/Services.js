@@ -7,7 +7,7 @@ const Services = () => {
     return (
         <section className="container service">
             <h3>Provide Awesome <span style={{color: '#7AB259'}}>Services</span> </h3>
-            <div className="row">
+            <div className="row mt-5">
             {
                 data.map(service =>{
                     return <ServiceItems service={service} key={service.id} />

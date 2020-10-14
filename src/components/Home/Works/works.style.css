@@ -1,0 +1,18 @@
+.work-container {
+    text-align: center;
+}
+
+.work-container h3 {
+    color: #ffffff;
+}
+
+.swiper-container {
+    margin-top: 3rem;
+}
+
+.slider-image {
+    width: 350px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px
+}
