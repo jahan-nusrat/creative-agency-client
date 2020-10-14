@@ -1,0 +1,9 @@
+.feedback-container {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.feedback-container h3 {
+    font-weight: 600;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Feedback from '../Feedback/Feedback';
 import Hero from '../Hero/Hero'
 import Navbar from '../Nav/Navbar';
 import Partners from '../Partners/Partners';
@@ -18,7 +19,7 @@ const Home = () => {
             <section className="work-section">
                 <Works />
             </section>
-
+            <Feedback />
         </div>
         
     )
