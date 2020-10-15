@@ -5,14 +5,14 @@ const FeedbackCard = ({ feedback }) => {
         <div className="col-lg-4 reviewer">
             <div className="reviewer-details">
                 <div className="reviewer-top d-flex align-items-center">
-                    <img className="img-fluid" src={feedback.image} alt={feedback.name} />
+                    <img className="img-fluid" src={feedback.img} alt={feedback.name} />
                     <div className="reviewer-head">
-                        <h4>{feedback.reviewer}</h4>
-                        <p>{feedback.position}</p>
+                        <h4>{feedback.name}</h4>
+                        <p>{feedback.company}</p>
                     </div>
                 </div>
                 <div className="review">
-                    <p>{feedback.review}</p>
+                    <p>{feedback.description.slice(0, 80)}...</p>
                 </div>
             </div>
         </div>

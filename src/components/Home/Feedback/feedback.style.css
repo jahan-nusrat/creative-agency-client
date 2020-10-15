@@ -8,42 +8,43 @@
     text-align: center;
 }
 
-.reviewer{
-    margin-top:1.8rem;
-    margin-bottom:1.8rem;
+.reviewer {
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .reviewer img {
     width: 64px;
     height: 64px;
+    border-radius: 50%;
     object-fit: contain;
 }
 
 .reviewer-details {
     border: 1px solid #E5E5E5;
     padding: 1rem;
-    border-radius:  5px;
+    border-radius: 5px;
 }
 
-.reviewer-head  {
+.reviewer-head {
     margin-left: 1rem;
 }
 
-.reviewer-head h4  {
-    font-size:  20px;
+.reviewer-head h4 {
+    font-size: 20px;
     margin-bottom: 0;
 }
 
-.reviewer-head p  {
+.reviewer-head p {
     margin-bottom: 0;
 }
 
-.review  {
+.review {
     margin-top: 0.8rem;
 }
 
-.review p  {
-    margin-bottom:  0;
+.review p {
+    margin-bottom: 0;
     color: #707070;
     font-weight: 300;
 }

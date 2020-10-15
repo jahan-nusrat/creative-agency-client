@@ -1,7 +1,8 @@
-const { LOGIN_USER, SIGNOUT_USER } = require('./action');
+const { LOGIN_USER, SIGNOUT_USER, SELECTED_SERVICE } = require('./action');
 
 const initialState = {
-    userInfo: {}
+    userInfo: {},
+    service:{}
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 userInfo: {}
             };
+        case SELECTED_SERVICE:
+            return{
+                ...state,
+                service:action.payload
+            }
         default:
             return state;
     }

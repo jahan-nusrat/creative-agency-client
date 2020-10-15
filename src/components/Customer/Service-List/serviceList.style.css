@@ -1,0 +1,49 @@
+.list {
+    padding: 0 2rem;
+    background-color: #fff;
+}
+
+.service-card {
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.service-top img {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+}
+
+.service-bottom p {
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.service-bottom h4 {
+    color: #111430;
+    font-size: 20px;
+}
+
+.pending {
+    font-size: 0.9rem;
+    color: #FF4545;
+    border: 1px solid #FF4545;
+    background-color: #FFE3E3;
+    text-transform: capitalize;
+}
+
+.done {
+    font-size: 0.9rem;
+    color: #009444;
+    border: 1px solid #009444;
+    background-color: #C6FFE0;
+    text-transform: capitalize;
+}
+
+.on-going {
+    font-size: 0.9rem;
+    color: #FFBD3E;
+    border: 1px solid #FFBD3E;
+    background-color: #f0f1a3;
+    text-transform: capitalize;
+}

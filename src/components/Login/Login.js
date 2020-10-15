@@ -25,7 +25,13 @@ const Login = () => {
             .auth()
             .signInWithPopup(provider)
             .then(function (result) {
-                dispatch(loggedInUser(result.user));
+                sessionStorage.setItem('info', JSON.stringify({
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    img: result.user.photoURL,
+                    id: result.user.uid
+                }))
+                dispatch(loggedInUser(JSON.parse(sessionStorage.getItem('info'))));
                 storeAuthToken();
             })
             .catch(function (error) {
