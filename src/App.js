@@ -7,6 +7,8 @@ import {
 import Admin from './components/Admin/Admin/Admin';
 import Customer from './components/Customer/Customer/Customer';
 import Home from './components/Home/Home/Home';
+import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const App = () => {
     return (
@@ -15,9 +17,12 @@ const App = () => {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/customer/:location">
-                    <Customer />
+                <Route path="/login">
+                    <Login />
                 </Route>
+                <PrivateRoute path="/customer/:location">
+                    <Customer />
+                </PrivateRoute>
                 <Route path="/admin/:location">
                     <Admin />
                 </Route>
