@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useState } from 'react';
 import ServiceCard from './ServiceCard';
 import './serviceList.style.css';
 import LOading from '../../Loading/LOading'
