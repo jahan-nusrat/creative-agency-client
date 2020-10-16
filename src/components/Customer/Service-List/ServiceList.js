@@ -9,7 +9,7 @@ const ServiceList = ({ user }) => {
     const [myOrders, setMyOrders] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
-        fetch(`http://localhost:5000/my-orders`, {
+        fetch(`https://immense-sands-60151.herokuapp.com/my-orders`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: user.email })

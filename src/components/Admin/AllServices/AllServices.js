@@ -25,7 +25,7 @@ const AllServices = () => {
     const classes = useStyles();
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://immense-sands-60151.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setAllOrders(data)
@@ -34,7 +34,7 @@ const AllServices = () => {
     }, [allOrders.decision])
 
     const handleChangeStatus = (newDecision, id) => {
-        fetch(`http://localhost:5000/update`, {
+        fetch(`https://immense-sands-60151.herokuapp.com/update`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

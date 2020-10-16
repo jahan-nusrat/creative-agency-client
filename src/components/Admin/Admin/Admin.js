@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import logo from '../../../images/logos/logo.png'
 import AddService from '../AddService/AddService';
@@ -9,6 +9,10 @@ import '../../Customer/Customer/customer.style.css';
 
 const Admin = () => {
     const { location } = useParams();
+    const [user, setUser] = useState({})
+    useEffect(() => {
+        setUser(JSON.parse(sessionStorage.getItem('info')))
+    }, [])
     return (
         <section className="customer-section container-fluid">
             <div className="py-3 px-5">
@@ -20,7 +24,7 @@ const Admin = () => {
                     </div>
                     <div className="col-md-9 col-9 d-flex customer-nav justify-content-between align-items-center">
                         <h4>{location}</h4>
-                        <p>Nusrat</p>
+                        <button className="btn shadow">{user.name}</button>
                     </div>
                 </div>
             </div>

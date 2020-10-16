@@ -21,7 +21,7 @@ const Login = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
 
     const isAdmin = (email) => {
-        fetch(`http://localhost:5000/admin/${email}`)
+        fetch(`https://immense-sands-60151.herokuapp.com/admin/${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -58,7 +58,6 @@ const Login = () => {
         firebase.auth().currentUser.getIdToken(true)
             .then(function (idToken) {
                 sessionStorage.setItem('token', idToken);
-               // history.replace(from);
             }).catch(function (error) {
                 alert(error.message)
             });

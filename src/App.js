@@ -8,6 +8,7 @@ import Admin from './components/Admin/Admin/Admin';
 import Customer from './components/Customer/Customer/Customer';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
+import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const App = () => {
@@ -26,6 +27,9 @@ const App = () => {
                 <PrivateRoute path="/admin/:location">
                     <Admin />
                 </PrivateRoute>
+                <Route path="*">
+                    <NotFound />
+                </Route>
             </Switch>
         </Router>
     )

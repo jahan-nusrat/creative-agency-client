@@ -5,7 +5,7 @@ import FeedbackCard from './FeedbackCard';
 const Feedback = () => {
     const [feedbacks, setFeedbacks] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://immense-sands-60151.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => {
                 setFeedbacks(data.slice(0, 6))

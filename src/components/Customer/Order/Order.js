@@ -31,7 +31,7 @@ const Order = ({ user }) => {
             name:user.name
         }
         e.preventDefault()
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://immense-sands-60151.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(info)

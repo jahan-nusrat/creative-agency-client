@@ -24,7 +24,7 @@ const Customer = () => {
                     </div>
                     <div className="col-md-9 col-sm-9 col-9 d-flex customer-nav justify-content-between align-items-center">
                         <h4>{location}</h4>
-                        <p>Nusrat</p>
+                        <button className="btn shadow">{user.name}</button>
                     </div>
                 </div>
             </div>
