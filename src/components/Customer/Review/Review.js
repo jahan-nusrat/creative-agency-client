@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import './review.style.css';
 
-const Review = () => {
+const Review = ({user}) => {
     const loggedIn = useSelector(state => state.userInfo);
     const [review, setReview] = useState({
-        img: loggedIn.img,
-        name: loggedIn.name,
+        img: user.img,
+        name: user.name,
         company: '',
         description: '',
     })

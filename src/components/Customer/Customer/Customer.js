@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import logo from '../../../images/logos/logo.png'
 import Order from '../Order/Order';
@@ -9,6 +9,10 @@ import './customer.style.css';
 
 const Customer = () => {
     const { location } = useParams();
+    const [user, setUser] = useState({})
+    useEffect(() => {
+        setUser(JSON.parse(sessionStorage.getItem('info')))
+    }, [])
     return (
         <section className="customer-section container-fluid">
             <div className="py-3 px-5">
@@ -31,13 +35,13 @@ const Customer = () => {
                     </div>
                     <div className="col-md-9 customer-right pt-5 pl-5">
                         {
-                            location === 'order' && <Order />
+                            location === 'order' && <Order user={user} />
                         }
                         {
-                            location === 'review' && <Review />
+                            location === 'review' && <Review user={user} />
                         }
                         {
-                            location === 'service list' && <ServiceList />
+                            location === 'service list' && <ServiceList user={user} />
                         }
                     </div>
                 </div>

@@ -2,15 +2,15 @@ import React from 'react'
 
 const ServiceCard = ({ order }) => {
     return (
-        <div className="col-lg-4 list">
+        <div className="col-lg-5 list mb-3">
             <div className="service-card">
-                <div className="service-top d-flex justify-content-between">
+                <div className="service-top">
                     <img className="img-fluid" src={order.icon} alt="icon" />
-                    <button className={`btn px-4 ${order.decision}`}>{order.decision}</button>
+                    <button className={`btn ${order.decision}`}>{order.decision}</button>
                 </div>
                 <div className="service-bottom">
                     <h4>{order.service}</h4>
-                    <p>{order.description}</p>
+                    <p>{order.description.slice(0, 75)}...</p>
                 </div>
             </div>
         </div>

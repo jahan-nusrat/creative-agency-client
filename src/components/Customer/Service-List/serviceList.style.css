@@ -1,11 +1,21 @@
 .list {
-    padding: 0 2rem;
-    background-color: #fff;
+    padding: 0 1rem;
 }
 
 .service-card {
     border-radius: 8px;
     padding: 1rem;
+    background-color: #fff;
+}
+
+.service-top  {
+    position: relative;
+}
+
+.service-top button{
+    position: absolute;
+    right: 10px;
+    top: 5px;
 }
 
 .service-top img {
@@ -22,6 +32,7 @@
 .service-bottom h4 {
     color: #111430;
     font-size: 20px;
+    margin-top:0.7rem;
 }
 
 .pending {
@@ -40,7 +51,7 @@
     text-transform: capitalize;
 }
 
-.on-going {
+.ongoing {
     font-size: 0.9rem;
     color: #FFBD3E;
     border: 1px solid #FFBD3E;

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import './order.style.css';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-const Order = () => {
-    const loggedIn = useSelector(state => state.userInfo)
+const Order = ({ user }) => {
     const selectedOrder = useSelector(state => state.service)
+    const history = useHistory()
 
     const [orderInfo, setOrderInfo] = useState({
-        email: loggedIn.email,
-        decision: 'pending',
         service: selectedOrder.service || '',
-        icon: selectedOrder.icon,
         description: '',
         price: selectedOrder.price || '',
     })
@@ -23,14 +21,24 @@ const Order = () => {
     }
 
     const handleSubmit = (e) => {
+        let info = {
+            decision: 'pending',
+            icon: selectedOrder.icon || 'https://i.ibb.co/Z6JPTCw/service4.png',
+            service: orderInfo.service,
+            description: orderInfo.description,
+            price: orderInfo.price,
+            email: user.email,
+            name:user.name
+        }
         e.preventDefault()
         fetch('http://localhost:5000/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(orderInfo)
+            body: JSON.stringify(info)
         }).then((result) => {
             alert('Your Order Has Been Placed')
         });
+        history.push('/customer/service list')
     }
 
     return (
@@ -39,10 +47,10 @@ const Order = () => {
                 <div className="col-lg-6">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <input type="text" value={loggedIn.name} className="form-control" placeholder="Your name / company’s name" required />
+                            <input type="text" value={user.name} className="form-control" placeholder="Your name / company’s name" required />
                         </div>
                         <div className="form-group">
-                            <input type="email" value={loggedIn.email} className="form-control" placeholder="Your email address" required />
+                            <input type="email" value={user.email} className="form-control" placeholder="Your email address" required />
                         </div>
                         <div className="form-group">
                             <input type="text" name="service" onChange={handleInput} value={orderInfo.service} className="form-control" placeholder="Service" required />

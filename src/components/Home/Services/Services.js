@@ -1,28 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import './sevices.style.css';
 import ServiceItems from './ServiceItems';
+import LOading from '../../Loading/LOading';
 
 const Services = () => {
     const [services, setServices] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(result => {
                 setServices(result)
+                setIsLoading(false)
             })
     }, [])
 
     return (
         <section className="container service">
             <h3>Provide Awesome <span style={{color: '#7AB259'}}>Services</span> </h3>
-            <div className="row mt-5">
+            {
+                isLoading ? <LOading /> : <div className="row mt-5">
             {
                     services.map(service => {
                         return <ServiceItems service={service} key={service._id} />
                 })
             }
             </div>
+            }
         </section>
     )
 }

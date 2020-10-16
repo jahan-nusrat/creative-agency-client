@@ -20,11 +20,25 @@ const Login = () => {
     const { from } = location.state || { from: { pathname: '/' } };
     var provider = new firebase.auth.GoogleAuthProvider();
 
+    const isAdmin = (email) => {
+        fetch(`http://localhost:5000/admin/${email}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data) {
+                    history.replace('admin/services list')
+                } else {
+                    history.replace('customer/order')
+                }
+            })
+    }
+
     const googleLogin = () => {
         firebase
             .auth()
             .signInWithPopup(provider)
             .then(function (result) {
+                let setAdmin = result.user
                 sessionStorage.setItem('info', JSON.stringify({
                     name: result.user.displayName,
                     email: result.user.email,
@@ -32,6 +46,7 @@ const Login = () => {
                     id: result.user.uid
                 }))
                 dispatch(loggedInUser(JSON.parse(sessionStorage.getItem('info'))));
+                isAdmin(setAdmin.email)
                 storeAuthToken();
             })
             .catch(function (error) {
@@ -43,7 +58,7 @@ const Login = () => {
         firebase.auth().currentUser.getIdToken(true)
             .then(function (idToken) {
                 sessionStorage.setItem('token', idToken);
-                history.replace(from);
+               // history.replace(from);
             }).catch(function (error) {
                 alert(error.message)
             });

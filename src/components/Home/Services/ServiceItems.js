@@ -22,8 +22,8 @@ const ServiceItems = ({ service }) => {
     }
 
     return (
-        <div className="col-lg-4" onClick={handleClick}>
-            <Link to={`/customer/order?${service._id}`}>
+        <div className="col-lg-4 service-info" onClick={handleClick}>
+            <Link to={`/customer/order?${service._id}`} className="nav-link">
             <animated.div
                 className="card"
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}

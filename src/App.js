@@ -23,9 +23,9 @@ const App = () => {
                 <PrivateRoute path="/customer/:location">
                     <Customer />
                 </PrivateRoute>
-                <Route path="/admin/:location">
+                <PrivateRoute path="/admin/:location">
                     <Admin />
-                </Route>
+                </PrivateRoute>
             </Switch>
         </Router>
     )
