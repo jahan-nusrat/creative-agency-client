@@ -10,19 +10,19 @@ const Partners = () => {
     return (
         <div className="container mt-5 partner">
             <div className="row justify-content-center">
-                <div className="col-lg">
+                <div className="col-md col-sm-4 col-5 mb-2">
                     <img src={google} alt="google" className="img-fluid"/>
                 </div>
-                <div className="col-lg">
+                <div className="col-md col-sm-4 col-5 mb-2">
                     <img src={airbnb} alt="airbnb" className="img-fluid"/>
                 </div>
-                <div className="col-lg">
+                <div className="col-md col-sm-4 col-5 mb-2">
                     <img src={netflix} alt="netflix" className="img-fluid"/>
                 </div>
-                <div className="col-lg">
+                <div className="col-md col-sm-4 col-5 mb-2">
                     <img src={slack} alt="slack" className="img-fluid"/>
                 </div>
-                <div className="col-lg">
+                <div className="col-md col-sm-4 col-5 mb-2">
                     <img src={uber} alt="uber" className="img-fluid"/>
                 </div>
             </div>

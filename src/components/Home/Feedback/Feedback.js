@@ -8,14 +8,14 @@ const Feedback = () => {
         fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => {
-                setFeedbacks(data.slice(0, 5))
+                setFeedbacks(data.slice(0, 6))
             })
     }, [])
 
     return (
         <section className="container feedback-container">
             <h3>Clients <span style={{ color: '#7AB259' }}>Feedback</span></h3>
-            <div className="row my-5">
+            <div className="row justify-content-center my-5">
                 {
                     feedbacks.map(feedback => {
                         return <FeedbackCard feedback={feedback} key={feedback._id} />

@@ -5,7 +5,7 @@ import { FaShoppingCart, FaRocketchat, FaNewspaper } from 'react-icons/fa'
 const Sidebar = ({ location }) => {
     return (
         <nav className="row justify-content-center">
-            <ul className="col-md-6 mt-5 nav flex-column sidebar-details">
+            <ul className="col-md-6 col-sm-10 col-12 mt-5 nav flex-column sidebar-details">
                 <li className="nav-item mb-3">
                     <Link className={` ${location === "order" ? "active" : "inactive"}`} to="/customer/order">
                         <FaShoppingCart className="icon" />    Order

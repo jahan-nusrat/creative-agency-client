@@ -5,7 +5,7 @@ import { FaPlus, FaUserPlus, FaNewspaper } from 'react-icons/fa';
 const LeftNav = ({ location }) => {
     return (
         <nav className="row justify-content-center">
-            <ul className="col-md-6 mt-5 nav flex-column sidebar-details">
+            <ul className="col-md-6 col-sm-5 col-4 mt-5 nav flex-column sidebar-details">
                 <li className="nav-item mb-3">
                     <Link className={` ${location === "services list" ? "active" : "inactive"}`} to="/admin/services%20list">
                         <FaNewspaper className="icon" />Services List

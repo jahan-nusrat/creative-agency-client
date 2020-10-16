@@ -22,7 +22,7 @@ const ServiceItems = ({ service }) => {
     }
 
     return (
-        <div className="col-lg-4 service-info" onClick={handleClick}>
+        <div className="col-lg-4 col-md-6 col-sm-7 col-9 service-info mb-3" onClick={handleClick}>
             <Link to={`/customer/order?${service._id}`} className="nav-link">
             <animated.div
                 className="card"
@@ -33,7 +33,10 @@ const ServiceItems = ({ service }) => {
 
                 <div className="service-box">
                     <div className="service-icon">
-                        <img src={service.icon} alt="" />
+                            {
+                                service.image ? <img src={`data:image/png;base64,${service.image.img}`} alt="icon" /> : <img src={service.icon} alt="" />
+                            }
+
                     </div>
                     <div className="service-details">
                         <h4>{service.service}</h4>

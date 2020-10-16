@@ -11,7 +11,7 @@ const Services = () => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(result => {
-                setServices(result)
+                setServices(result.slice(0, 6))
                 setIsLoading(false)
             })
     }, [])
@@ -20,7 +20,7 @@ const Services = () => {
         <section className="container service">
             <h3>Provide Awesome <span style={{color: '#7AB259'}}>Services</span> </h3>
             {
-                isLoading ? <LOading /> : <div className="row mt-5">
+                isLoading ? <LOading /> : <div className="row justify-content-center mt-5">
             {
                     services.map(service => {
                         return <ServiceItems service={service} key={service._id} />

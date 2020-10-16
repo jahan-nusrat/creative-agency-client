@@ -31,3 +31,15 @@
     margin-right: 0.5rem;
     margin-top: -3.4px;
 }
+
+.imgUpload {
+    position: relative;
+}
+
+.imgUpload input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    padding: 0 3rem;
+}

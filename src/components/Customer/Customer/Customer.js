@@ -16,24 +16,24 @@ const Customer = () => {
     return (
         <section className="customer-section container-fluid">
             <div className="py-3 px-5">
-                <div className="row align-items-center">
-                    <div className="col-md-3">
+                <div className="row justify-content-center align-items-center">
+                    <div className="col-md-3 col-sm-4 col-12">
                         <Link to="/">
                             <img src={logo} alt="logo" className="img-fluid nav-logo" />
                         </Link>
                     </div>
-                    <div className="col-md-9 d-flex customer-nav justify-content-between align-items-center">
+                    <div className="col-md-9 col-sm-9 col-9 d-flex customer-nav justify-content-between align-items-center">
                         <h4>{location}</h4>
                         <p>Nusrat</p>
                     </div>
                 </div>
             </div>
             <div className="customer">
-                <div className="row">
-                    <div className="col-md-3 sidebar">
+                <div className="row justify-content-center">
+                    <div className="col-md-3 col-sm-8 col-10 sidebar">
                         <Sidebar location={location} />
                     </div>
-                    <div className="col-md-9 customer-right pt-5 pl-5">
+                    <div className="col-md-9 col-sm-12 col-12 customer-right pt-5 pl-5">
                         {
                             location === 'order' && <Order user={user} />
                         }
