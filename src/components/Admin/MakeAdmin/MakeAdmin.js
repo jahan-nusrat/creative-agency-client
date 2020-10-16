@@ -27,20 +27,20 @@ const MakeAdmin = () => {
     }
 
     return (
-        <div className="row">
-            <form onSubmit={handleSubmit} className="col-8">
-                <div className="make-admin py-4 px-3">
+        <div className="row justify-content-center">
+            <form onSubmit={handleSubmit} className="col-12">
+                <div className="make-admin pt-4 px-4">
                     <label htmlFor="email">Email</label>
                     <br />
                     <input
                         type="email"
-                        required
                         name="email"
                         onChange={handleInput}
-                        placeholder="jon@gmail.com"
+                        placeholder="johnSmith@gmail.com"
                         className="py-1 px-3 w-50"
+                        required
                     />
-                    <button type="submit" class="btn btn-success px-4 ml-2 mb-1">
+                    <button type="submit" class="btn btn-success px-4 ml-2">
                         Submit
                     </button>
                 </div>

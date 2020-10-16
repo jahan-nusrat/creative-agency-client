@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
+import './addservice.style.css';
 
 const AddService = () => {
     return (
-        <form onSubmit={(e) => e.preventDefault()} className="addService__form">
+        <form onSubmit={(e) => e.preventDefault()} className="add-service">
             <div className="row">
                 <div className="col-md-6">
                     <label htmlFor="">
@@ -20,16 +22,16 @@ const AddService = () => {
                         rows="5"
                         required
                         placeholder="Enter Description"
-                        className="form-control mb-4"
+                        className="form-control mb-5"
                     />
                 </div>
-                <div className="col-md-6 ">
+                <div className="col-md-6">
                     <label htmlFor="">
                         <strong>Icon</strong>
                     </label>
-                    <div className="my-2 p-3">
-                        <label htmlFor="coverImg" className="uploadImg">
-                            <i class="fas fa-cloud-upload-alt"></i> Upload Image
+                    <div className="">
+                        <label htmlFor="coverImg" className="icon-upload px-4 py-2">
+                            <FaCloudDownloadAlt className="cloud" /> Upload Image
                         </label>
                         <input
                             type="file"
@@ -40,8 +42,8 @@ const AddService = () => {
                     </div>
                 </div>
             </div>
-            <button type="submit" className="btn px-4 my-3 btn-success">
-                SUBMIT
+            <button type="submit" className="btn px-4 my-3">
+                Submit
             </button>
         </form>
     )
